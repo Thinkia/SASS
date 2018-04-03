@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> sass Test</title>
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+    <nav>
+        <!-- logo -->
+        <div class="nav-logo">
+            <a href="###"><img src="" alt="logo"> </a>
+        </div>
+        <!-- 控制menu -->
+        <div class="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- menu -->
+        <ul class="nav-list">
+            <li>
+                <a href="###" class="active" >首页</a>
+            </li>
+            <li>
+                <a href="###" > 拓科技</a>
+            </li>
+
+            <li>
+                <a href="###" > 拓应用</a>
+            </li>
+            <li>
+                <a href="###"> 拓空间<div class="carect"> </div> </a>
+                <ul class="menu" >
+                    <li>
+                        <a href="###" >单空间</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="###" > 拓服务</a>
+            </li>
+            <li>
+                <a href="###"> 个人中心 <div class="carect"></div> </a>
+                <ul class="menu" >
+                    <li>
+                        <a href="###" > 模型管理</a>
+                        <a href="###" > 模型管理-文件夹列表 </a>
+                        <a href="###" > 账号管理</a>
+                        <a href="###" > 数据管理 </a>
+                        <a href="###" > 单个模型管理</a>
+                        <a href="###" > 找回密码-1 </a>
+                        <a href="###" > 个人中心 </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>测试栏目测试栏目</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).click(function(){
+        $('.nav-list').removeClass('open')
+        })
+    $('.nav-menu,.nav-list').click(function(e){e.stopPropagation()})
+
+    $('nav').find('.nav-menu').click(function(e){
+            $('.nav-list').toggleClass('open')
+        })
+</script>
+
+</html>
